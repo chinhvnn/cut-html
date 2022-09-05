@@ -1,6 +1,4 @@
 mixin ad_content(title, ...items)
-    .title 
-        h1 = title
-    .des
-        each item in items
-            p = item
+    h1.title= title
+    each item in items
+        p.des= item
