@@ -1,0 +1,125 @@
+//FONT
+@font-face {
+    font-family: "CinzelDecorative";
+    src: url("/app/public/font/CinzelDecorative-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "CinzelDecorative-Black";
+    src: url("/app/public/font/CinzelDecorative-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Amin Regular";
+    src: url("/app/public/font/Amin Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+
+//RESET
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+
+    body {
+        font-family: "CinzelDecorative";
+    }
+}
+
+@media only screen and (max-width: $desktop-width) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: $laptop-width) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: $tablet-width) {
+    html {
+        font-size: 7px;
+    }
+}
+
+
+//FONT
+
+//GRID FLEX CONTAINER
+.container {
+    background-color: transparent;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+
+$col-num : (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+@mixin flex-cont {
+    width: 100%;
+    min-height: 1px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+}
+
+@each $col in $col-num {
+
+    // Small view
+    .flex-cont-sm-#{$col} {
+        @include flex-cont();
+    }
+
+    @media (min-width: $mobile-width) {
+        .flex-cont-sm-#{$col} {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 percentage(calc($col/12));
+            flex: 0 0 percentage(calc($col/12));
+            max-width: percentage(calc($col/12));
+        }
+    }
+
+    // Medium view
+    .flex-cont-md-#{$col} {
+        @include flex-cont();
+    }
+
+    @media all and (min-width: $tablet-width) {
+        .flex-cont-md-#{$col} {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 percentage(calc($col/12)) !important;
+            flex: 0 0 percentage(calc($col/12)) !important;
+            max-width: percentage(calc($col/12)) !important;
+        }
+    }
+
+    // LARG view
+    .flex-cont-lg-#{$col} {
+        @include flex-cont();
+    }
+
+    @media all and (min-width: $desktop-width) {
+        .flex-cont-lg-#{$col} {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 percentage(calc($col/12)) !important;
+            flex: 0 0 percentage(calc($col/12)) !important;
+            max-width: percentage(calc($col/12)) !important;
+        }
+    }
+
+}

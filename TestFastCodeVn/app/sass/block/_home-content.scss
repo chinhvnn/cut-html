@@ -1,0 +1,349 @@
+.content {
+    position: relative;
+    z-index: 1;
+    top: -35px;
+    background-color: #1c1d0f;
+
+    .title {
+        font-size: 6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .des {
+        font-size: 2rem;
+        line-height: 4rem;
+        font-family: 'Amiri', serif;
+    }
+}
+
+//------- TOP CONTENT --------//
+.content-top {
+    position: relative;
+    z-index: 10;
+    border: 1px solid rgb(129, 114, 114);
+
+    .content-top1 {
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #1a1c0f;
+
+        &__text {
+            padding: 8% 7% 0px 7%;
+
+            .title {
+                color: #ffff;
+            }
+
+            .des {
+                color: #cdb378;
+            }
+        }
+
+        &__photo {
+            position: relative;
+            // z-index: 10;
+            top: -1.9rem;
+            width: 590px;
+            height: 630px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: 100%;
+            }
+        }
+    }
+
+    .content-top2 {
+        position: relative;
+        z-index: 10;
+        margin-top: -250px;
+        display: flex;
+        align-items: center;
+        padding: 0px 25% 0px 7%;
+        height: 495px;
+        width: 87%;
+        background: url("/app/public/img/top-bg.png");
+        background-size: 100%, 100%;
+        box-shadow: 0 0px 50px 5px rgba($color: #000000, $alpha: 0.5);
+
+        &__text {
+            .title {
+                color: #cdb378;
+            }
+
+            .des {
+                color: #b4ba98;
+            }
+
+            .check-more {
+                color: white;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+        }
+
+        &__beer {
+            position: absolute;
+            z-index: 20;
+            right: 11.8%;
+            top: -60%;
+
+            img {
+                vertical-align: middle;
+                width: 100%;
+                // object-fit: cover;
+                // object-position: 100%;
+            }
+        }
+    }
+}
+
+//------- MIDDLE CONTENT --------//
+.content-middle {
+    height: 885px;
+    background: url("/app/public/img/middle-photo.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: "CinzelDecorative-Black";
+    font-size: 3.5rem;
+
+    h2 {
+        margin-right: 6%;
+    }
+}
+
+//------- BOTTOM CONTENT --------//
+.content-bot {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #1a1c0f;
+
+    &__text {
+        padding: 6% 6% 0px 7%;
+        flex: 60%;
+        .title {
+            color: #ffff;
+        }
+
+        .des {
+            color: #b4ba98;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        // z-index: 10;
+        top: -10rem;
+        flex: 40%;
+        height: auto;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: 100%;
+        }
+    }
+}
+
+//------- START JOUNEY CONTENT --------//
+.start {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1c0f;
+    position: relative;
+    z-index: 10;
+
+    .title {
+        color: #cdb378;
+    }
+
+    .des {
+        color: #b4ba98;
+    }
+
+    .btn {
+        margin-top: 4rem;
+        width: 180px;
+    }
+
+    .start-photo {
+        position: absolute;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+//------- RESPONSIVE --------//
+@media screen and (max-width: 1600px) {
+
+    .content-top {
+        .content-top1__photo {
+            width: 1000px;
+        }
+
+        .content-top2 {
+            width: 90%;
+            height: 420px;
+            margin-top: -150px;
+        }
+
+        .content-top2__beer {
+            right: 5%;
+            scale: 0.7;
+
+        }
+
+    }
+
+    .content-middle {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 1386px) {
+
+    .content-top {
+        .content-top1__photo {
+            height: 500px;
+            width: 800px;
+        }
+
+        .content-top2 {
+            height: 350px;
+            width: 95%;
+        }
+
+        .content-top2__beer {
+            right: 0;
+            top: -300px;
+            scale: 0.6;
+
+        }
+    }
+
+    .content-middle {
+        height: 500px;
+    }
+
+    .content-bot {
+        &__photo {
+            top: -5rem;
+            flex: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        .title {
+            font-size: 4rem !important;
+        }
+    }
+
+    .content-top {
+        .content-top1__photo {
+            height: 400px;
+            width: 800px;
+        }
+
+        .content-top2 {
+            width: 95%;
+            height: 300px;
+
+            &__beer {
+                right: -40px;
+                scale: 0.5;
+            }
+        }
+    }
+
+    .content-middle {
+        height: 420px;
+    }
+
+    .content-bot {
+        &__photo {
+            flex: 30%;
+            top: 3rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .content {
+        .title {
+            font-size: 3rem !important;
+        }
+    }
+
+    .content-top {
+        .content-top1 {
+            flex-direction: column;
+
+            &__photo {
+                top: 20px;
+                width: 100%;
+            }
+
+            &__text {
+                text-align: center;
+            }
+        }
+
+        .content-top2 {
+            margin-top: 0;
+            width: 100%;
+            height: 250px;
+
+            &__text {
+                text-align: center;
+            }
+
+            &__beer {
+                right: -60px;
+                bottom: -200px;
+                scale: 0.3;
+            }
+        }
+
+    }
+
+    .content-middle {
+        height: 320px;
+        background-position: 50%;
+        font-size: 2rem;
+    }
+
+    .content-bot {
+        text-align: center;
+
+        &__photo {
+            display: none !important;
+        }
+    }
+
+    .start {
+        .start-photo {
+            img {
+                height: 700px !important;
+            }
+        }
+    }
+}

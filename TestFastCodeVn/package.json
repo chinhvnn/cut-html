@@ -1,0 +1,24 @@
+{
+  "name": "test-fastcodevn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch app/sass/index.scss app/public/style.css"
+  },
+  "author": "ChinhLv",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "gulp-install": "^1.1.0",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2",
+    "sass": "^1.54.8"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

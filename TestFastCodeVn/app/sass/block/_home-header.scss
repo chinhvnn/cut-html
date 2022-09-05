@@ -1,0 +1,178 @@
+//------- HEADER BANNER --------//
+.header {
+    height: 1096px;
+    text-align: center;
+    background-image: url("/app/public/img/banner-bg.png");
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // margin-top: -100px;
+    position: relative;
+    z-index: 1;
+
+    &__logo {
+        padding-top: 10rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: "CinzelDecorative-Black";
+        margin-top: 10rem;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #ffff;
+
+        span {
+            position: relative;
+
+        }
+
+        span::before,
+        span::after {
+            content: '';
+            transform: translate(50%, 50%);
+            width: 250px;
+            border-bottom: solid 3px #cdb378;
+            position: absolute;
+            top: 45%;
+            z-index: 1;
+
+        }
+
+        span::before {
+            right: 310px !important;
+        }
+
+        span::after {
+            left: 50px !important;
+        }
+    }
+
+    &__slogan {
+        font-size: 3rem;
+        color: #ffff;
+    }
+
+    &__publish {
+        font-family: 'Amiri', serif;
+        line-height: 2.5;
+        font-size: 2rem;
+        color: #cdb378;
+    }
+
+    &__view-more {
+        font-family: 'Amiri', serif;
+        font-style: italic;
+        margin-top: 27.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #cdb378;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        &:hover{
+            color: #fff;
+            transition: 1s;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .header {
+        height: 900px;
+
+        span::before {
+            width: 180px;
+            right: 240px !important;
+        }
+
+        span::after {
+            width: 180px;
+            left: 50px !important;
+        }
+
+        &__logo {
+            scale: 0.9;
+        }
+    }
+}
+
+@media screen and (max-width: 1386px) {
+    .header {
+        height: 850px;
+
+        span::before {
+            width: 150px;
+            right: 210px !important;
+        }
+
+        span::after {
+            width: 150px;
+            left: 55px !important;
+        }
+
+        &__logo {
+            scale: 0.9;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        height: 750px;
+
+        span::before {
+            width: 140px;
+            right: 180px !important;
+        }
+
+        span::after {
+            width: 140px;
+            left: 35px !important;
+        }
+
+        &__logo {
+            scale: 0.8;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        height: 600px;
+
+        span::before {
+            width: 80px;
+            right: 130px !important;
+        }
+
+        span::after {
+            width: 80px;
+            left: 45px !important;
+        }
+
+        &__logo {
+            padding-top: 7rem;
+            scale: 0.7;
+        }
+
+        &__title {
+            margin-top: 10rem;
+            font-size: 4rem;
+        }
+
+        &__slogan {
+            font-size: 2rem;
+        }
+
+        &__publish {
+            font-size: 2rem;
+        }
+
+        &__view-more {
+            margin-top: 18rem;
+            font-size: 1.5rem;
+        }
+    }
+}
