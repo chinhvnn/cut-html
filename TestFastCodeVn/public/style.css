@@ -348,6 +348,7 @@ html body {
   height: 885px;
   background: url("img/middle-photo.png");
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -390,6 +391,7 @@ html body {
 .start {
   padding-top: 10%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -408,6 +410,7 @@ html body {
   width: 180px;
 }
 .start .start-photo {
+  width: 100%;
   position: absolute;
   z-index: -1;
 }
