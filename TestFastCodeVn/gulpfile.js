@@ -5,8 +5,8 @@ var gulp = require("gulp"),
 // run this task by typing in gulp pug in CLI
 gulp.task("pug", function () {
   return gulp
-    .src("./app/views/temp/*.pug")
-    .pipe(watch("./app/views/temp/*.pug"))
+    .src("./views/temp/*.pug")
+    .pipe(watch("./views/temp/*.pug"))
     .pipe(pug()) // pipe to pug plugin
-    .pipe(gulp.dest("./app/views")); // tell gulp our output folder
+    .pipe(gulp.dest("./")); // tell gulp our output folder
 });
