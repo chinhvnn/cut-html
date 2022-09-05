@@ -339,6 +339,10 @@ html body {
   vertical-align: middle;
   width: 100%;
 }
+.content-top .content-top2__beer img:hover {
+  scale: 1.2;
+  transition: 1s;
+}
 
 .content-middle {
   height: 885px;
