@@ -2,7 +2,7 @@
 .header {
     height: 1096px;
     text-align: center;
-    background-image: url("public/img/banner-bg.png");
+    background-image: url("img/banner-bg.png");
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,22 +30,35 @@
         span::before,
         span::after {
             content: '';
-            transform: translate(50%, 50%);
+            // transform: translate(50%, 50%);
             width: 250px;
-            border-bottom: solid 3px #cdb378;
+            border-bottom: solid 0.4rem #cdb378;
             position: absolute;
             top: 45%;
             z-index: 1;
-
+            animation: viewLine 1.5s 0s linear forwards;
+            -moz-animation: viewLine 1.5s 0s linear forwards;
+            -o-animation: viewLine 1.5s 0s linear forwards;
+            -webkit-animation: viewLine 1.5s 0s linear forwards;
         }
 
         span::before {
-            right: 310px !important;
+            right: 180px !important;
         }
 
         span::after {
-            left: 50px !important;
+            left: 180px !important;
         }
+
+        @keyframes viewLine {
+            from {
+                width: 0px;
+            }
+            to{
+                width: 130%;
+            }
+        }
+
     }
 
     &__slogan {
@@ -84,12 +97,12 @@
 
         span::before {
             width: 180px;
-            right: 240px !important;
+            right: 140px !important;
         }
 
         span::after {
             width: 180px;
-            left: 50px !important;
+            left: 140px !important;
         }
 
         &__logo {
@@ -104,12 +117,12 @@
 
         span::before {
             width: 150px;
-            right: 210px !important;
+            right: 130px !important;
         }
 
         span::after {
             width: 150px;
-            left: 55px !important;
+            left: 130px !important;
         }
 
         &__logo {
@@ -124,12 +137,12 @@
 
         span::before {
             width: 140px;
-            right: 180px !important;
+            right: 110px !important;
         }
 
         span::after {
             width: 140px;
-            left: 35px !important;
+            left: 110px !important;
         }
 
         &__logo {
@@ -144,12 +157,12 @@
 
         span::before {
             width: 80px;
-            right: 130px !important;
+            right: 90px !important;
         }
 
         span::after {
             width: 80px;
-            left: 45px !important;
+            left: 90px !important;
         }
 
         &__logo {

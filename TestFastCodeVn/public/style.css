@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: normal;
 }
-* {
+*, ::after, ::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,6 +70,38 @@ html body {
   background-color: #8b7950;
 }
 
+.loader {
+  font-family: sans-serif;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: azure;
+  z-index: 1000;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 200px;
+}
+.loader i {
+  animation: 3s linear 0s infinite loader;
+  -webkit-animation: 3s linear 0s infinite loader;
+  -moz-animation: 3s linear 0s infinite loader;
+  -o-animation: 3s linear 0s infinite loader;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
 .header {
   height: 1096px;
   text-align: center;
@@ -97,18 +129,29 @@ html body {
 .header__title span::before,
 .header__title span::after {
   content: "";
-  transform: translate(50%, 50%);
   width: 250px;
-  border-bottom: solid 3px #cdb378;
+  border-bottom: solid 0.4rem #cdb378;
   position: absolute;
   top: 45%;
   z-index: 1;
+  animation: viewLine 1.5s 0s linear forwards;
+  -moz-animation: viewLine 1.5s 0s linear forwards;
+  -o-animation: viewLine 1.5s 0s linear forwards;
+  -webkit-animation: viewLine 1.5s 0s linear forwards;
 }
 .header__title span::before {
-  right: 310px !important;
+  right: 180px !important;
 }
 .header__title span::after {
-  left: 50px !important;
+  left: 180px !important;
+}
+@keyframes viewLine {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 130%;
+  }
 }
 .header__slogan {
   font-size: 3rem;
@@ -142,11 +185,11 @@ html body {
   }
   .header span::before {
     width: 180px;
-    right: 240px !important;
+    right: 140px !important;
   }
   .header span::after {
     width: 180px;
-    left: 50px !important;
+    left: 140px !important;
   }
   .header__logo {
     scale: 0.9;
@@ -158,11 +201,11 @@ html body {
   }
   .header span::before {
     width: 150px;
-    right: 210px !important;
+    right: 130px !important;
   }
   .header span::after {
     width: 150px;
-    left: 55px !important;
+    left: 130px !important;
   }
   .header__logo {
     scale: 0.9;
@@ -174,11 +217,11 @@ html body {
   }
   .header span::before {
     width: 140px;
-    right: 180px !important;
+    right: 110px !important;
   }
   .header span::after {
     width: 140px;
-    left: 35px !important;
+    left: 110px !important;
   }
   .header__logo {
     scale: 0.8;
@@ -190,11 +233,11 @@ html body {
   }
   .header span::before {
     width: 80px;
-    right: 130px !important;
+    right: 90px !important;
   }
   .header span::after {
     width: 80px;
-    left: 45px !important;
+    left: 90px !important;
   }
   .header__logo {
     padding-top: 7rem;

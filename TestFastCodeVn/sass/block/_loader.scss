@@ -1,0 +1,34 @@
+.loader {
+    font-family: sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+    z-index: 1000;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 200px;
+
+    i {
+        animation: 3s linear 0s infinite loader;
+        -webkit-animation: 3s linear 0s infinite loader;
+        -moz-animation: 3s linear 0s infinite loader;
+        -o-animation: 3s linear 0s infinite loader;
+    }
+
+    @keyframes loader {
+        from {
+            transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+    }
+}

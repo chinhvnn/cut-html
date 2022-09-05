@@ -65,7 +65,7 @@
         padding: 0px 25% 0px 7%;
         height: 495px;
         width: 87%;
-        background: url("public/img/top-bg.png");
+        background: url("img/top-bg.png");
         background-size: 100%, 100%;
         box-shadow: 0 0px 50px 5px rgba($color: #000000, $alpha: 0.5);
 
@@ -104,7 +104,7 @@
 //------- MIDDLE CONTENT --------//
 .content-middle {
     height: 885px;
-    background: url("public/img/middle-photo.png");
+    background: url("img/middle-photo.png");
     background-size: cover;
     display: flex;
     flex-direction: column;
